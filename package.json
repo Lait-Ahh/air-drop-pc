@@ -1,0 +1,60 @@
+{
+  "name": "air-drop-pc",
+  "version": "1.0.0",
+  "description": "A simple app that allow you to use air-drop with non apple computer",
+  "license": "ISC",
+  "author": {
+    "name": "Lait-Ahh",
+    "email": "contact@lea-paris.fr",
+    "url": "https://lea-paris.fr"
+  },
+  "homepage": "https://github.com/Lait-Ahh/air-drop-pc#readme",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron .",
+    "build": "electron-builder -w && electron-builder -l && npm run prepare",
+    "prepare": "node scripts/rename.js"
+  },
+  "build": {
+    "appId": "air-drop",
+    "productName": "Air Drop",
+    "files": [
+
+    ],
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "license": "build/cgu.txt",
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false,
+      "allowToChangeInstallationDirectory": false,
+      "uninstallDisplayName": "Uninstall Air Drop"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lait-Ahh/air-drop-pc.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Lait-Ahh/air-drop-pc/issues"
+  },
+  "devDependencies": {
+    "electron": "^23.1.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
