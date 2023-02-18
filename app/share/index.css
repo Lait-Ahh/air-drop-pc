@@ -1,0 +1,143 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family:  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+}
+
+* {
+    user-select: none;
+}
+
+.Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, #115FBB, #FF00DC);
+}
+
+.Blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #47474742;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Title {
+    margin: 10px;
+    color: #FFF;
+    flex: none;
+}
+
+.Drops {
+    flex: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    width: calc(100% - 70px);
+    text-align: center;
+}
+
+.Drops::-webkit-scrollbar {
+    width: 8px;
+} 
+
+.Drops::-webkit-scrollbar-track {
+    background: none; 
+} 
+
+.Drops::-webkit-scrollbar-thumb {
+    background: #535353;
+    border-radius: 8px;
+}
+
+.Drops::-webkit-scrollbar-thumb:hover {
+    background: #5e5e5e;
+}
+
+.Drop {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    height: 150px;
+    border-radius: 5px;
+    border: #6b6b6b 1px solid;
+    transition: border .2s, background .2s;
+}
+
+.Drop:hover {
+    background-color: #6b6b6b5b;
+    border: #6b6b6b5b 1px solid;
+    cursor: pointer;
+}
+
+.Drop__Image {
+    width: 70px;
+    margin: 10px;
+}
+
+.Drop__Name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.2em;
+    max-width: 120px;
+    width: 120px;
+}
+
+.Message {
+    font-family:  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    background-color: #6b6b6b52;
+    border: #6b6b6b 1px solid;
+    border-radius: 5px;
+    color: #FFF;
+    padding: 5px;
+    font-size: 1em;
+    outline: none;
+    resize: none;
+    width: 500px;
+    height: 60px;
+    flex: none;
+    margin: 10px;
+}
+
+.Message::placeholder {
+    color: #FFF;
+}
+
+.Buttons {
+    flex: none;
+    padding: 10px;
+    width: calc(100% - 20px);
+    text-align: end;
+}
+
+.Button {
+    font-family:  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    background-color: #0071e3;
+    color: #FFF;
+    border: none;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 150px;
+    border-radius: 7px;
+    transition: filter .2s, background-color .2s;
+}
+
+.Button--Secondary {
+    background-color: #535353;
+}
+
+.Button:hover {
+    cursor: pointer;
+    filter: saturate(1.5);
+}
+
+.Button--Secondary:hover {
+    background-color: #5e5e5e;
+}

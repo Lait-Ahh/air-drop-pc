@@ -19,9 +19,7 @@
   "build": {
     "appId": "air-drop",
     "productName": "Air Drop",
-    "files": [
-
-    ],
+    "files": [],
     "win": {
       "target": [
         "zip",
@@ -55,6 +53,8 @@
     "electron-builder": "^23.6.0"
   },
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "electron-store": "^8.1.0",
+    "fs": "^0.0.1-security",
+    "node-file-dialog": "^1.0.3"
   }
 }

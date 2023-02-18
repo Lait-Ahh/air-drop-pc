@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family:  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+}
+
+.Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, #115FBB, #FF00DC);
+}
+
+.Blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #47474742;
+}
